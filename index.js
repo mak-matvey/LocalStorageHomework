@@ -10,8 +10,11 @@ button.addEventListener('click', function () {
 		array.push(currentValue)
 		localStorage.setItem('Text', JSON.stringify(array))
 	} else {
-		localStorage.setItem('Text', currentValue)
+		const array = []
+		array.push(currentValue)
+		localStorage.setItem('Text', JSON.stringify(array))
 	}
+	input.value = ''
 })
 
 showbutton.addEventListener('click', function () {
